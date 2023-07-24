@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div>
+            <div class="nav">
+                <h1>Library</h1>
+            </div>
+            <div class="mainContentContainer">
+                <div class="buttonsGroup">
+                    <button onclick="openMenu();">Add Book</button>
+                </div>
+                <form
+                    class="addBookForm"
+                    id="addBookForm"
+                    action="/submit_form"
+                    method="post">
+                    <div class="titleAndExit" id="titleAndExit">
+                        <h1 class="title">Add Book</h1>
+                        <button
+                            class="exit"
+                            type="button"
+                            onclick="closeMenu(); return false">
+                            X
+                        </button>
+                    </div>
+
+                    <label for="bookTitle">Book Title</label>
+                    <input
+                        type="text"
+                        id="bookTitle"
+                        placeholder="Book Title"
+                        required />
+                    <label for="bookDescription">Description</label>
+                    <input
+                        type="text"
+                        id="bookDescription"
+                        placeholder="Book Description"
+                        required />
+                    <label for="bookReleaseDate">Release Date</label>
+                    <input
+                        type="date"
+                        id="bookReleaseDate"
+                        placeholder="Book Release Date"
+                        required />
+                    <label for="bookRead">Read</label>
+                    <input type="checkbox" id="bookRead" required />
+                    <button type="submit">Submit</button>
+                </form>
+                <div class="books" id="books"></div>
+            </div>
+        </div>
+    </body>
+</html>
